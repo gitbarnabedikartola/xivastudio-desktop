@@ -1,0 +1,14 @@
+pkgname=xivastudio-desktop
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+arch=('any')
+license=('GPL')
+depends=('bootsplash-theme-xivastudio' 'grub-theme-xivastudio' 'xivastudio-meta-audio-config' 'xivastudio-name' 'xivastudio-session-and-themes' 'xivastudio-welcome' )
+url="https://github.com/xivastudio/$pkgname"
+pkgdesc="Meta package for XIVAStudio"
+source=("git+https://github.com/xivastudio/$pkgname.git")
+md5sums=(SKIP)
+
+package() {
+    cp -r "${srcdir}/$pkgname/usr/" "${pkgdir}/"
+}
