@@ -9,6 +9,3 @@ pkgdesc="Meta package for XIVAStudio"
 source=("git+https://github.com/xivastudio/$pkgname.git")
 md5sums=(SKIP)
 
-package() {
-    cp -r "${srcdir}/$pkgname/usr/" "${pkgdir}/"
-}
